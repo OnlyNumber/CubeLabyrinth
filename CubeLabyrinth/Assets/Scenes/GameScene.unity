@@ -13509,8 +13509,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07025cf71d754c44bb06b5333d0d47ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathZonesCount: 10
+  _deathZonesCount: 70
   _astarPath: {fileID: 48941898}
   _cell: {fileID: 4930566638883962940, guid: 7be8f96b3c014d044954d8afc3c3be28, type: 3}
   _deathZone: {fileID: 2842196841957806588, guid: 17291574e5e51eb4097779cf2a6e86d8, type: 3}
   _pathZone: {fileID: 3425964171966859934, guid: 7ab74ffa91663c64a996aec97e1f7658, type: 3}
+  _rangeToStartOrFinish: 3

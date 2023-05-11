@@ -21,28 +21,31 @@ public class LabyrinthGenerator : MonoBehaviour
     [SerializeField]
     private Zone _deathZone;
 
-    private LabyrinthCell[,] _labyrinthMas;
+    private LabyrinthCell[,] _labyrinthMatrix;
 
     [SerializeField]
     private GameObject _pathZone;
 
+    [SerializeField]
+    private int _rangeToStartOrFinish;
+
 
     private void Start()
     {
-        _labyrinthMas = new LabyrinthCell[_width, _height];
+        _labyrinthMatrix = new LabyrinthCell[_width, _height];
 
         for (int x = 0; x < _width; x++)
         {
             for (int y = 0; y < _height; y++)
             {
-                _labyrinthMas[x, y] = Instantiate(_cell, new Vector3((float)x - 10.5f, 0, (float)y - 10.5f), Quaternion.identity, transform).GetComponent<LabyrinthCell>();
+                _labyrinthMatrix[x, y] = Instantiate(_cell, new Vector3((float)x - 10.5f, 0, (float)y - 10.5f), Quaternion.identity, transform).GetComponent<LabyrinthCell>();
 
-                _labyrinthMas[x, y].X = x;
-                _labyrinthMas[x, y].Y = y;
+                _labyrinthMatrix[x, y].X = x;
+                _labyrinthMatrix[x, y].Y = y;
                 if (x == 0)
-                    _labyrinthMas[x, y].leftWall.SetActive(false);
+                    _labyrinthMatrix[x, y].leftWall.SetActive(false);
                 if (y == 0)
-                    _labyrinthMas[x, y].downWall.SetActive(false);
+                    _labyrinthMatrix[x, y].downWall.SetActive(false);
 
             }
         }
@@ -53,7 +56,7 @@ public class LabyrinthGenerator : MonoBehaviour
 
     public void Generation()
     {
-        LabyrinthCell currentCell = _labyrinthMas[0, 0];
+        LabyrinthCell currentCell = _labyrinthMatrix[0, 0];
 
         currentCell.IsVisited = true;
 
@@ -67,22 +70,22 @@ public class LabyrinthGenerator : MonoBehaviour
 
             unvisitedCells.Clear();
 
-            if (currentCell.X + 1 < _width && !_labyrinthMas[currentCell.X + 1, currentCell.Y].IsVisited)
+            if (currentCell.X + 1 < _width && !_labyrinthMatrix[currentCell.X + 1, currentCell.Y].IsVisited)
             {
-                unvisitedCells.Add(_labyrinthMas[currentCell.X + 1, currentCell.Y]);
+                unvisitedCells.Add(_labyrinthMatrix[currentCell.X + 1, currentCell.Y]);
             }
-            if (currentCell.X > 0 && !_labyrinthMas[currentCell.X - 1, currentCell.Y].IsVisited)
+            if (currentCell.X > 0 && !_labyrinthMatrix[currentCell.X - 1, currentCell.Y].IsVisited)
             {
-                unvisitedCells.Add(_labyrinthMas[currentCell.X - 1, currentCell.Y]);
+                unvisitedCells.Add(_labyrinthMatrix[currentCell.X - 1, currentCell.Y]);
             }
 
-            if (currentCell.Y + 1 < _width && !_labyrinthMas[currentCell.X, currentCell.Y + 1].IsVisited)
+            if (currentCell.Y + 1 < _width && !_labyrinthMatrix[currentCell.X, currentCell.Y + 1].IsVisited)
             {
-                unvisitedCells.Add(_labyrinthMas[currentCell.X, currentCell.Y + 1]);
+                unvisitedCells.Add(_labyrinthMatrix[currentCell.X, currentCell.Y + 1]);
             }
-            if (currentCell.Y > 0 && !_labyrinthMas[currentCell.X, currentCell.Y - 1].IsVisited)
+            if (currentCell.Y > 0 && !_labyrinthMatrix[currentCell.X, currentCell.Y - 1].IsVisited)
             {
-                unvisitedCells.Add(_labyrinthMas[currentCell.X, currentCell.Y - 1]);
+                unvisitedCells.Add(_labyrinthMatrix[currentCell.X, currentCell.Y - 1]);
             }
 
             if (unvisitedCells.Count > 0)
@@ -158,18 +161,34 @@ public class LabyrinthGenerator : MonoBehaviour
     {
         Zone zone;
 
+        int randomX;
+
+        int randomY;
+
+        
+
+
         for (int i = 0; i < _deathZonesCount; i++)
         {
-            
+            randomX = UnityEngine.Random.Range(_rangeToStartOrFinish, _width - _rangeToStartOrFinish);
 
+            randomY = UnityEngine.Random.Range(_rangeToStartOrFinish, _height - _rangeToStartOrFinish);
+
+            zone = Instantiate(_deathZone, _labyrinthMatrix[randomX,randomY].transform.position, Quaternion.identity, transform);
+
+            zone.OnTriggerAction += action;
+
+            zone.transform.position = new Vector3(zone.transform.position.x, 0.02f, zone.transform.position.z);
+        }
+
+
+        /*for (int i = 0; i < _deathZonesCount; i++)
+        {
             zone = Instantiate(_deathZone, playerPath[UnityEngine.Random.Range(20, playerPath.Count - 20)], Quaternion.identity, transform);
 
             zone.OnTriggerAction += action;
             zone.transform.position = new Vector3(zone.transform.position.x, 0.02f, zone.transform.position.z);
-
-
-
-        }
+        }*/
     }
 
 
