@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Keys>
+    <Key Name = "Continue">
+        <Translate>
+            <en-us>Continue</en-us>
+            <ru>Продолжаем</ru>
+            <ua>Продовжаємо</ua>
+        </Translate>
+    </Key>
+    <Key Name = "Exit">
+        <Translate>
+            <en-us>Exit</en-us>
+            <ru>Выход</ru>
+            <ua>Вихід</ua>
+        </Translate>
+    </Key>
+    <Key Name = "Pause">
+        <Translate>
+            <en-us>Pause</en-us>
+            <ru>Пауза</ru>
+            <ua>Зупинка</ua>
+        </Translate>
+    </Key>
+    <Key Name = "Shield">
+        <Translate>
+            <en-us>Shield</en-us>
+            <ru>Щит</ru>
+            <ua>Щит</ua>
+        </Translate>
+    </Key>
+</Keys>
