@@ -5431,7 +5431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344665513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: 0.0001, z: 10.5}
+  m_LocalPosition: {x: 10.5, y: 0.02, z: 10.5}
   m_LocalScale: {x: 0.1, y: 1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6366,7 +6366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &915036583
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6437,6 +6437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b796efa27ee306f48bbe29b427448781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  darkTime: 3
+  fadeTime: 2
 --- !u!1 &919544102
 GameObject:
   m_ObjectHideFlags: 0
@@ -13507,7 +13509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07025cf71d754c44bb06b5333d0d47ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathZonesCount: 10
+  _deathZonesCount: 10
   _astarPath: {fileID: 48941898}
   _cell: {fileID: 4930566638883962940, guid: 7be8f96b3c014d044954d8afc3c3be28, type: 3}
-  deathZone: {fileID: 2842196841957806588, guid: 17291574e5e51eb4097779cf2a6e86d8, type: 3}
+  _deathZone: {fileID: 2842196841957806588, guid: 17291574e5e51eb4097779cf2a6e86d8, type: 3}
+  _pathZone: {fileID: 3425964171966859934, guid: 7ab74ffa91663c64a996aec97e1f7658, type: 3}

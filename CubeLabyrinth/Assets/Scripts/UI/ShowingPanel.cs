@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class ShowingPanel : MonoBehaviour
 {
+    [SerializeField]
+    private float darkTime;
+
+    [SerializeField]
+    private float fadeTime;
+
     private void Start()
     {
         Fading();
@@ -13,7 +19,7 @@ public class ShowingPanel : MonoBehaviour
 
     public void Fading()
     {
-        GetComponent<Image>().DOFade(0, 2);
+        GetComponent<Image>().DOFade(0, fadeTime);
 
         StartCoroutine(WaitingDestroy());
     }
@@ -29,8 +35,6 @@ public class ShowingPanel : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        GetComponent<Image>().DOFade(1, 2);
+        GetComponent<Image>().DOFade(1, darkTime);
     }
-
-
 }

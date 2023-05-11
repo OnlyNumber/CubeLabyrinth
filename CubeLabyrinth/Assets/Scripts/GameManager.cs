@@ -37,13 +37,20 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator CreateLabyrinth()
     {
+        List<Vector3> playerPath;
+
         yield return new WaitForSeconds(0.1f);
 
         _labyrinthGenerator.Scan();
 
         yield return StartCoroutine(_moveController.SearchPath());
 
-        _labyrinthGenerator.CreateDeathZones(_moveController.CurrentPathCreate(), RestartLevel);
+        playerPath = _moveController.CurrentPathCreate();
+
+        _labyrinthGenerator.CreateDeathZones(playerPath, RestartLevel);
+
+        _labyrinthGenerator.SpawnPlayerPath(playerPath);
+
 
     }
 

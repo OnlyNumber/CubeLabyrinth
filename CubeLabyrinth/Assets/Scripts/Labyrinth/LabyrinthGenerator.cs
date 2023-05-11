@@ -5,12 +5,12 @@ using System;
 
 public class LabyrinthGenerator : MonoBehaviour
 {
-    private int width = 22;
+    private int _width = 22;
 
-    private int height = 22;
+    private int _height = 22;
 
     [SerializeField]
-    private int deathZonesCount;
+    private int _deathZonesCount;
 
     [SerializeField]
     private AstarPath _astarPath;
@@ -19,19 +19,21 @@ public class LabyrinthGenerator : MonoBehaviour
     private GameObject _cell;
 
     [SerializeField]
-    private Zone deathZone;
+    private Zone _deathZone;
 
     private LabyrinthCell[,] _labyrinthMas;
 
+    [SerializeField]
+    private GameObject _pathZone;
 
 
     private void Start()
     {
-        _labyrinthMas = new LabyrinthCell[width, height];
+        _labyrinthMas = new LabyrinthCell[_width, _height];
 
-        for (int x = 0; x < width; x++)
+        for (int x = 0; x < _width; x++)
         {
-            for (int y = 0; y < height; y++)
+            for (int y = 0; y < _height; y++)
             {
                 _labyrinthMas[x, y] = Instantiate(_cell, new Vector3((float)x - 10.5f, 0, (float)y - 10.5f), Quaternion.identity, transform).GetComponent<LabyrinthCell>();
 
@@ -63,7 +65,7 @@ public class LabyrinthGenerator : MonoBehaviour
         {
             unvisitedCells.Clear();
 
-            if (currentCell.X + 1 < width && !_labyrinthMas[currentCell.X + 1, currentCell.Y].IsVisited)
+            if (currentCell.X + 1 < _width && !_labyrinthMas[currentCell.X + 1, currentCell.Y].IsVisited)
             {
                 unvisitedCells.Add(_labyrinthMas[currentCell.X + 1, currentCell.Y]);
             }
@@ -72,7 +74,7 @@ public class LabyrinthGenerator : MonoBehaviour
                 unvisitedCells.Add(_labyrinthMas[currentCell.X - 1, currentCell.Y]);
             }
 
-            if (currentCell.Y + 1 < width && !_labyrinthMas[currentCell.X, currentCell.Y + 1].IsVisited)
+            if (currentCell.Y + 1 < _width && !_labyrinthMas[currentCell.X, currentCell.Y + 1].IsVisited)
             {
                 unvisitedCells.Add(_labyrinthMas[currentCell.X, currentCell.Y + 1]);
             }
@@ -136,7 +138,7 @@ public class LabyrinthGenerator : MonoBehaviour
 
     public LabyrinthCell[,] GenerateLabyrinth()
     {
-        LabyrinthCell[,] labyrinth = new LabyrinthCell[width, height];
+        LabyrinthCell[,] labyrinth = new LabyrinthCell[_width, _height];
 
         for (int x = 0; x < labyrinth.GetLength(0); x++)
         {
@@ -155,16 +157,31 @@ public class LabyrinthGenerator : MonoBehaviour
         _astarPath.Scan();
     }
 
+    public void SpawnPlayerPath(List<Vector3> playerPath)
+    {
+        GameObject zone;
+
+        foreach(var node in playerPath)
+        {
+            zone = Instantiate(_pathZone, node, Quaternion.identity,transform);
+
+            zone.transform.position = new Vector3(zone.transform.position.x, 0.01f, zone.transform.position.z);
+        }
+
+    }
+
     public void CreateDeathZones(List<Vector3> playerPath,   Action action )
     {
         Zone zone;
 
-        for (int i = 0; i < deathZonesCount; i++)
+        for (int i = 0; i < _deathZonesCount; i++)
         {
-            zone = Instantiate(deathZone, playerPath[UnityEngine.Random.Range(20, playerPath.Count - 20)], Quaternion.identity, transform);
+            
+
+            zone = Instantiate(_deathZone, playerPath[UnityEngine.Random.Range(20, playerPath.Count - 20)], Quaternion.identity, transform);
 
             zone.OnTriggerAction += action;
-            zone.transform.position = new Vector3(zone.transform.position.x, 0.1f, zone.transform.position.z);
+            zone.transform.position = new Vector3(zone.transform.position.x, 0.02f, zone.transform.position.z);
 
 
 
