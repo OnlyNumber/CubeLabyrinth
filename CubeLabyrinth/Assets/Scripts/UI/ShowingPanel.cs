@@ -34,7 +34,6 @@ public class ShowingPanel : MonoBehaviour
     public void Dark()
     {
         gameObject.SetActive(true);
-
         GetComponent<Image>().DOFade(1, darkTime);
     }
 }

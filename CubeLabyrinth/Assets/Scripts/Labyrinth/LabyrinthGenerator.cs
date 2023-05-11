@@ -63,13 +63,15 @@ public class LabyrinthGenerator : MonoBehaviour
 
         do
         {
+            currentCell.IsVisited = true;
+
             unvisitedCells.Clear();
 
             if (currentCell.X + 1 < _width && !_labyrinthMas[currentCell.X + 1, currentCell.Y].IsVisited)
             {
                 unvisitedCells.Add(_labyrinthMas[currentCell.X + 1, currentCell.Y]);
             }
-            if (currentCell.X - 1 >= 0 && !_labyrinthMas[currentCell.X - 1, currentCell.Y].IsVisited)
+            if (currentCell.X > 0 && !_labyrinthMas[currentCell.X - 1, currentCell.Y].IsVisited)
             {
                 unvisitedCells.Add(_labyrinthMas[currentCell.X - 1, currentCell.Y]);
             }
@@ -78,24 +80,22 @@ public class LabyrinthGenerator : MonoBehaviour
             {
                 unvisitedCells.Add(_labyrinthMas[currentCell.X, currentCell.Y + 1]);
             }
-            if (currentCell.Y - 1 >= 0 && !_labyrinthMas[currentCell.X, currentCell.Y - 1].IsVisited)
+            if (currentCell.Y > 0 && !_labyrinthMas[currentCell.X, currentCell.Y - 1].IsVisited)
             {
                 unvisitedCells.Add(_labyrinthMas[currentCell.X, currentCell.Y - 1]);
             }
 
             if (unvisitedCells.Count > 0)
             {
-
-
                 LabyrinthCell neighbourCell = unvisitedCells[UnityEngine.Random.Range(0, unvisitedCells.Count)];
-
-                currentCell.IsVisited = true;
 
                 RemoveWallBetweenCells(currentCell, neighbourCell);
 
                 previousCells.Push(neighbourCell);
 
                 currentCell = neighbourCell;
+
+                
             }
             else
             {
@@ -103,7 +103,7 @@ public class LabyrinthGenerator : MonoBehaviour
             }
 
 
-        } while (previousCells.Count != 0);
+        } while (previousCells.Count > 0);
 
     }
 
@@ -133,22 +133,6 @@ public class LabyrinthGenerator : MonoBehaviour
                 fromCell.leftWall.SetActive(false);
             }
         }
-
-    }
-
-    public LabyrinthCell[,] GenerateLabyrinth()
-    {
-        LabyrinthCell[,] labyrinth = new LabyrinthCell[_width, _height];
-
-        for (int x = 0; x < labyrinth.GetLength(0); x++)
-        {
-            for (int y = 0; y < labyrinth.GetLength(1); y++)
-            {
-                //labyrinth[x,y] = new 
-            }
-        }
-
-        return labyrinth;
 
     }
 
