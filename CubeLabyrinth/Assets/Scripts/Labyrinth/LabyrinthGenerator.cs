@@ -5,8 +5,11 @@ using System;
 
 public class LabyrinthGenerator : MonoBehaviour
 {
+    //22
+    [SerializeField]
     private int _width = 22;
 
+    [SerializeField]
     private int _height = 22;
 
     [SerializeField]
@@ -38,7 +41,7 @@ public class LabyrinthGenerator : MonoBehaviour
         {
             for (int y = 0; y < _height; y++)
             {
-                _labyrinthMatrix[x, y] = Instantiate(_cell, new Vector3((float)x - 10.5f, 0, (float)y - 10.5f), Quaternion.identity, transform).GetComponent<LabyrinthCell>();
+                _labyrinthMatrix[x, y] = Instantiate(_cell, new Vector3((float)x - 10.5f, 0, (float)y - 10.5f), Quaternion.identity).GetComponent<LabyrinthCell>();
 
                 _labyrinthMatrix[x, y].X = x;
                 _labyrinthMatrix[x, y].Y = y;
@@ -174,7 +177,7 @@ public class LabyrinthGenerator : MonoBehaviour
 
             randomY = UnityEngine.Random.Range(_rangeToStartOrFinish, _height - _rangeToStartOrFinish);
 
-            zone = Instantiate(_deathZone, _labyrinthMatrix[randomX,randomY].transform.position, Quaternion.identity, transform);
+            zone = Instantiate(_deathZone, _labyrinthMatrix[randomX,randomY].transform.position, Quaternion.identity);
 
             zone.OnTriggerAction += action;
 
