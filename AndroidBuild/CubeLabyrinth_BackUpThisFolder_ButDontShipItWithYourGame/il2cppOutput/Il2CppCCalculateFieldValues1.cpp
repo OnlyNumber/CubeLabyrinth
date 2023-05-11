@@ -26493,20 +26493,24 @@ struct LabyrinthCreator_t68940ABC23A158E10CD76162A0756BFBC906E6E2  : public Mono
 // LabyrinthGenerator
 struct LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// System.Int32 LabyrinthGenerator::width
-	int32_t ___width_4;
-	// System.Int32 LabyrinthGenerator::height
-	int32_t ___height_5;
-	// System.Int32 LabyrinthGenerator::deathZonesCount
-	int32_t ___deathZonesCount_6;
+	// System.Int32 LabyrinthGenerator::_width
+	int32_t ____width_4;
+	// System.Int32 LabyrinthGenerator::_height
+	int32_t ____height_5;
+	// System.Int32 LabyrinthGenerator::_deathZonesCount
+	int32_t ____deathZonesCount_6;
 	// AstarPath LabyrinthGenerator::_astarPath
 	AstarPath_tE102E3063DF1D4829BBD2F0FD324CBDD1417F760* ____astarPath_7;
 	// UnityEngine.GameObject LabyrinthGenerator::_cell
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____cell_8;
-	// Zone LabyrinthGenerator::deathZone
-	Zone_tD6D0FD7C37671DA41722ACE264CD6764830D8C13* ___deathZone_9;
-	// LabyrinthCell[,] LabyrinthGenerator::_labyrinthMas
-	LabyrinthCellU5BU2CU5D_t70B9C4E4066F98F474C4AC7FDB19718118FAD026* ____labyrinthMas_10;
+	// Zone LabyrinthGenerator::_deathZone
+	Zone_tD6D0FD7C37671DA41722ACE264CD6764830D8C13* ____deathZone_9;
+	// LabyrinthCell[,] LabyrinthGenerator::_labyrinthMatrix
+	LabyrinthCellU5BU2CU5D_t70B9C4E4066F98F474C4AC7FDB19718118FAD026* ____labyrinthMatrix_10;
+	// UnityEngine.GameObject LabyrinthGenerator::_pathZone
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____pathZone_11;
+	// System.Int32 LabyrinthGenerator::_rangeToStartOrFinish
+	int32_t ____rangeToStartOrFinish_12;
 };
 
 // LocalizationManager
@@ -33978,9 +33982,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5047[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5048[5] = 
 {
 	static_cast<int32_t>(offsetof(LabyrinthCell_t052E49A927AFFED0427478718D2AD761B9DF4D3A, ___X_4)),static_cast<int32_t>(offsetof(LabyrinthCell_t052E49A927AFFED0427478718D2AD761B9DF4D3A, ___Y_5)),static_cast<int32_t>(offsetof(LabyrinthCell_t052E49A927AFFED0427478718D2AD761B9DF4D3A, ___leftWall_6)),static_cast<int32_t>(offsetof(LabyrinthCell_t052E49A927AFFED0427478718D2AD761B9DF4D3A, ___downWall_7)),static_cast<int32_t>(offsetof(LabyrinthCell_t052E49A927AFFED0427478718D2AD761B9DF4D3A, ___IsVisited_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5049[7] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5049[9] = 
 {
-	static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ___width_4)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ___height_5)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ___deathZonesCount_6)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____astarPath_7)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____cell_8)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ___deathZone_9)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____labyrinthMas_10)),};
+	static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____width_4)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____height_5)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____deathZonesCount_6)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____astarPath_7)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____cell_8)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____deathZone_9)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____labyrinthMatrix_10)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____pathZone_11)),static_cast<int32_t>(offsetof(LabyrinthGenerator_tD0503DC18D77DC4451D6FBFB885414F7282FB68D, ____rangeToStartOrFinish_12)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5050[6] = 
 {
 	static_cast<int32_t>(offsetof(LabyrinthCreator_t68940ABC23A158E10CD76162A0756BFBC906E6E2, ____obstacles_4)),static_cast<int32_t>(offsetof(LabyrinthCreator_t68940ABC23A158E10CD76162A0756BFBC906E6E2, ____numberOfObstacles_5)),static_cast<int32_t>(offsetof(LabyrinthCreator_t68940ABC23A158E10CD76162A0756BFBC906E6E2, ____widthOfPlane_6)),static_cast<int32_t>(offsetof(LabyrinthCreator_t68940ABC23A158E10CD76162A0756BFBC906E6E2, ____highOfPlane_7)),static_cast<int32_t>(offsetof(LabyrinthCreator_t68940ABC23A158E10CD76162A0756BFBC906E6E2, ____obstaclesPool_8)),static_cast<int32_t>(offsetof(LabyrinthCreator_t68940ABC23A158E10CD76162A0756BFBC906E6E2, ____astarPath_9)),};

@@ -45,15 +45,12 @@ public class ShieldActivation : MonoBehaviour
             {
                 OnUp();
             }
-
         }
     }
 
 
     public void OnDown()
     {
-        //_boxCollider.enabled = false
-
         if (_playerAvatar.activeInHierarchy)
         {
             gameObject.layer = DEFAULT_LAYER;

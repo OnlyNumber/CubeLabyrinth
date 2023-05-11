@@ -74,10 +74,10 @@ extern void LabyrinthGenerator_Start_m2991789923AC32DCD6265334A6810F2F94BC25EB (
 extern void LabyrinthGenerator_Generation_mDA13A38B47C45348F041F9E08D9334A6A888CAE7 (void);
 // 0x0000001F System.Void LabyrinthGenerator::RemoveWallBetweenCells(LabyrinthCell,LabyrinthCell)
 extern void LabyrinthGenerator_RemoveWallBetweenCells_m6B711FE29FFC461E680242D4B77166DC00865034 (void);
-// 0x00000020 LabyrinthCell[,] LabyrinthGenerator::GenerateLabyrinth()
-extern void LabyrinthGenerator_GenerateLabyrinth_mE19E2FBF0334F4B70572A69ACCAB1445D5014F77 (void);
-// 0x00000021 System.Void LabyrinthGenerator::Scan()
+// 0x00000020 System.Void LabyrinthGenerator::Scan()
 extern void LabyrinthGenerator_Scan_m0AEBAA922A57D6438E66F4002C1BE7016F999EAD (void);
+// 0x00000021 System.Void LabyrinthGenerator::SpawnPlayerPath(System.Collections.Generic.List`1<UnityEngine.Vector3>)
+extern void LabyrinthGenerator_SpawnPlayerPath_mA6546520F8611BD1F3A42AECFABD871E786772E7 (void);
 // 0x00000022 System.Void LabyrinthGenerator::CreateDeathZones(System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Action)
 extern void LabyrinthGenerator_CreateDeathZones_m3DE5A7AD4E93BBE72429D3018CFE4E6056071F59 (void);
 // 0x00000023 System.Void LabyrinthGenerator::.ctor()
@@ -789,8 +789,8 @@ static Il2CppMethodPointer s_methodPointers[372] =
 	LabyrinthGenerator_Start_m2991789923AC32DCD6265334A6810F2F94BC25EB,
 	LabyrinthGenerator_Generation_mDA13A38B47C45348F041F9E08D9334A6A888CAE7,
 	LabyrinthGenerator_RemoveWallBetweenCells_m6B711FE29FFC461E680242D4B77166DC00865034,
-	LabyrinthGenerator_GenerateLabyrinth_mE19E2FBF0334F4B70572A69ACCAB1445D5014F77,
 	LabyrinthGenerator_Scan_m0AEBAA922A57D6438E66F4002C1BE7016F999EAD,
+	LabyrinthGenerator_SpawnPlayerPath_mA6546520F8611BD1F3A42AECFABD871E786772E7,
 	LabyrinthGenerator_CreateDeathZones_m3DE5A7AD4E93BBE72429D3018CFE4E6056071F59,
 	LabyrinthGenerator__ctor_m743079C3C3C7AD722672F553367865A81D4A5A9D,
 	LabyrinthCreator_Scan_m6148E9E3D266976B2A62C815FEC4B26D4F0EF301,
@@ -1164,8 +1164,8 @@ static const int32_t s_InvokerIndices[372] =
 	4650,
 	4650,
 	2255,
-	4554,
 	4650,
+	3811,
 	2255,
 	4650,
 	4650,

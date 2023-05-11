@@ -180,15 +180,6 @@ public class LabyrinthGenerator : MonoBehaviour
 
             zone.transform.position = new Vector3(zone.transform.position.x, 0.02f, zone.transform.position.z);
         }
-
-
-        /*for (int i = 0; i < _deathZonesCount; i++)
-        {
-            zone = Instantiate(_deathZone, playerPath[UnityEngine.Random.Range(20, playerPath.Count - 20)], Quaternion.identity, transform);
-
-            zone.OnTriggerAction += action;
-            zone.transform.position = new Vector3(zone.transform.position.x, 0.02f, zone.transform.position.z);
-        }*/
     }
 
 
