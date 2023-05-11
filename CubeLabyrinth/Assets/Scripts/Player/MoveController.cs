@@ -33,11 +33,14 @@ public class MoveController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Application.targetFrameRate = 300;
+        Application.targetFrameRate = 60;
 
         StartCoroutine(DelayToMove());
 
     }
+
+    
+
 
     [ContextMenu("CurrentPathCreate")]
     public List<Vector3> CurrentPathCreate()

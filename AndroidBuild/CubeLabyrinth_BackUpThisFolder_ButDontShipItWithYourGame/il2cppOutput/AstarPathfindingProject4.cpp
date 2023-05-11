@@ -25909,7 +25909,7 @@ IL_0044:
 		Type_t* L_14 = V_1;
 		NullCheck(L_14);
 		bool L_15;
-		L_15 = VirtualFuncInvoker0< bool >::Invoke(67 /* System.Boolean System.Type::get_IsEnum() */, L_14);
+		L_15 = VirtualFuncInvoker0< bool >::Invoke(69 /* System.Boolean System.Type::get_IsEnum() */, L_14);
 		if (!L_15)
 		{
 			goto IL_006e;
@@ -26050,7 +26050,7 @@ IL_0112:
 		Type_t* L_45 = V_0;
 		NullCheck(L_45);
 		FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8* L_46;
-		L_46 = VirtualFuncInvoker1< FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8*, int32_t >::Invoke(85 /* System.Reflection.FieldInfo[] System.Type::GetFields(System.Reflection.BindingFlags) */, L_45, ((int32_t)52));
+		L_46 = VirtualFuncInvoker1< FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8*, int32_t >::Invoke(87 /* System.Reflection.FieldInfo[] System.Type::GetFields(System.Reflection.BindingFlags) */, L_45, ((int32_t)52));
 		// foreach (var field in fields) {
 		V_6 = L_46;
 		V_7 = 0;
@@ -26157,7 +26157,7 @@ IL_016e:
 		RuntimeObject* L_70 = ___obj0;
 		NullCheck(L_69);
 		RuntimeObject* L_71;
-		L_71 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_69, L_70);
+		L_71 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(24 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_69, L_70);
 		TinyJsonSerializer_Serialize_mCACFD74B2C44F5A4A38134DD57591110ED5B0320(__this, L_71, NULL);
 	}
 
@@ -26183,7 +26183,7 @@ IL_019d:
 		Type_t* L_75 = V_0;
 		NullCheck(L_75);
 		Type_t* L_76;
-		L_76 = VirtualFuncInvoker0< Type_t* >::Invoke(108 /* System.Type System.Type::get_BaseType() */, L_75);
+		L_76 = VirtualFuncInvoker0< Type_t* >::Invoke(114 /* System.Type System.Type::get_BaseType() */, L_75);
 		V_0 = L_76;
 		// if (type == null) break;
 		Type_t* L_77 = V_0;
@@ -26807,7 +26807,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TinyJsonDeserializer_Deseriali
 		Type_t* L_2 = V_0;
 		NullCheck(L_2);
 		bool L_3;
-		L_3 = VirtualFuncInvoker0< bool >::Invoke(67 /* System.Boolean System.Type::get_IsEnum() */, L_2);
+		L_3 = VirtualFuncInvoker0< bool >::Invoke(69 /* System.Boolean System.Type::get_IsEnum() */, L_2);
 		if (!L_3)
 		{
 			goto IL_001c;
@@ -27430,13 +27430,13 @@ IL_03cb:
 		String_t* L_163 = V_7;
 		NullCheck(L_162);
 		FieldInfo_t* L_164;
-		L_164 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(84 /* System.Reflection.FieldInfo System.Type::GetField(System.String,System.Reflection.BindingFlags) */, L_162, L_163, ((int32_t)52));
+		L_164 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(86 /* System.Reflection.FieldInfo System.Type::GetField(System.String,System.Reflection.BindingFlags) */, L_162, L_163, ((int32_t)52));
 		V_9 = L_164;
 		// tmpType = tmpType.BaseType;
 		Type_t* L_165 = V_8;
 		NullCheck(L_165);
 		Type_t* L_166;
-		L_166 = VirtualFuncInvoker0< Type_t* >::Invoke(108 /* System.Type System.Type::get_BaseType() */, L_165);
+		L_166 = VirtualFuncInvoker0< Type_t* >::Invoke(114 /* System.Type System.Type::get_BaseType() */, L_165);
 		V_8 = L_166;
 	}
 

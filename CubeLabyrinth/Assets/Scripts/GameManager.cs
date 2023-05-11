@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private MoveController _moveController;
 
-    private ParticleController particleController;
+    private ParticleController _particleController;
+
+    private SoundController _soundController;
 
     [SerializeField]
     private ShowingPanel _showingPanel;
@@ -23,7 +25,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        particleController = _moveController.GetComponent<ParticleController>();
+        _particleController = _moveController.GetComponent<ParticleController>();
+
+        _soundController = _moveController.GetComponent<SoundController>();
 
         _finishZone.OnTriggerAction += _showingPanel.Dark;
 
@@ -61,7 +65,9 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator RestartLevelawfesawgawegawgawge()
     {
-        particleController.DeathPlay();
+        _particleController.DeathPlay();
+
+        _soundController.ActivateExplosion();
 
         _moveController.ChangeState();
 
@@ -85,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartBoom()
     {
-        particleController.BoomPlay();
+        _particleController.BoomPlay();
 
         yield return new WaitForSeconds(3);
 

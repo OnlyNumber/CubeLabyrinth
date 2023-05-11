@@ -10,9 +10,6 @@ public class ParticleController : MonoBehaviour
     [SerializeField]
     private ParticleSystem _boomParticle;
 
-    [SerializeField]
-    private Sprite _playerAvatar;
-
     [ContextMenu("Death")]
     public void DeathPlay()
     {
@@ -22,7 +19,6 @@ public class ParticleController : MonoBehaviour
 
     public void BoomPlay()
     {
-
         Debug.Log("BoomPlay");
         _boomParticle.Play();
     }

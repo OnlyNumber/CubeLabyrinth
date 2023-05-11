@@ -5315,7 +5315,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ZipEntry_t4CA08F4B43AFD6D9C4B8B5114CEAB4A9FFD
 		L_7 = ZipFile_get_StatusMessageTextWriter_mCA689B17429252FBD69FC2E7933AE687613CD68B_inline(__this, NULL);
 		String_t* L_8 = ___fileName0;
 		NullCheck(L_7);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_7, _stringLiteral490893AD5A37D9C8BA68E8B954E7AFD083E67700, L_8);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_7, _stringLiteral490893AD5A37D9C8BA68E8B954E7AFD083E67700, L_8);
 	}
 
 IL_002c:
@@ -6104,7 +6104,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ZipEntry_t4CA08F4B43AFD6D9C4B8B5114CEAB4A9FFD
 		StreamWriter_t6E7DF7D524AA3C018A65F62EE80779873ED4D1E4* L_4 = V_1;
 		String_t* L_5 = ___content1;
 		NullCheck(L_4);
-		VirtualActionInvoker1< String_t* >::Invoke(15 /* System.Void System.IO.TextWriter::Write(System.String) */, L_4, L_5);
+		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_4, L_5);
 		StreamWriter_t6E7DF7D524AA3C018A65F62EE80779873ED4D1E4* L_6 = V_1;
 		NullCheck(L_6);
 		VirtualActionInvoker0::Invoke(10 /* System.Void System.IO.TextWriter::Flush() */, L_6);
@@ -6160,7 +6160,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ZipEntry_t4CA08F4B43AFD6D9C4B8B5114CEAB4A9FFD
 		L_8 = ZipFile_get_StatusMessageTextWriter_mCA689B17429252FBD69FC2E7933AE687613CD68B_inline(__this, NULL);
 		String_t* L_9 = ___entryName0;
 		NullCheck(L_8);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_8, _stringLiteral490893AD5A37D9C8BA68E8B954E7AFD083E67700, L_9);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_8, _stringLiteral490893AD5A37D9C8BA68E8B954E7AFD083E67700, L_9);
 	}
 
 IL_0039:
@@ -6201,7 +6201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ZipEntry_t4CA08F4B43AFD6D9C4B8B5114CEAB4A9FFD
 		L_4 = ZipFile_get_StatusMessageTextWriter_mCA689B17429252FBD69FC2E7933AE687613CD68B_inline(__this, NULL);
 		String_t* L_5 = ___entryName0;
 		NullCheck(L_4);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_4, _stringLiteral490893AD5A37D9C8BA68E8B954E7AFD083E67700, L_5);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_4, _stringLiteral490893AD5A37D9C8BA68E8B954E7AFD083E67700, L_5);
 	}
 
 IL_0024:
@@ -6254,7 +6254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ZipEntry_t4CA08F4B43AFD6D9C4B8B5114CEAB4A9FFD
 		L_9 = ZipFile_get_StatusMessageTextWriter_mCA689B17429252FBD69FC2E7933AE687613CD68B_inline(__this, NULL);
 		String_t* L_10 = ___entryName0;
 		NullCheck(L_9);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_9, _stringLiteral490893AD5A37D9C8BA68E8B954E7AFD083E67700, L_10);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_9, _stringLiteral490893AD5A37D9C8BA68E8B954E7AFD083E67700, L_10);
 	}
 
 IL_003a:
@@ -6761,7 +6761,7 @@ IL_002b:
 	{
 		String_t* L_3 = ___directoryName0;
 		NullCheck(G_B4_2);
-		VirtualActionInvoker3< String_t*, RuntimeObject*, RuntimeObject* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object) */, G_B4_2, G_B4_1, G_B4_0, L_3);
+		VirtualActionInvoker3< String_t*, RuntimeObject*, RuntimeObject* >::Invoke(22 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object) */, G_B4_2, G_B4_1, G_B4_0, L_3);
 	}
 
 IL_0031:
@@ -7352,7 +7352,7 @@ IL_0042_3:
 								int64_t L_41 = L_40;
 								RuntimeObject* L_42 = Box(Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_il2cpp_TypeInfo_var, &L_41);
 								NullCheck(L_32);
-								VirtualActionInvoker4< String_t*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(20 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object,System.Object) */, L_32, _stringLiteral47C6C7C7F7D0ED4EDF270A495CAD44BCC0E02309, L_34, L_38, L_42);
+								VirtualActionInvoker4< String_t*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(23 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object,System.Object) */, L_32, _stringLiteral47C6C7C7F7D0ED4EDF270A495CAD44BCC0E02309, L_34, L_38, L_42);
 							}
 
 IL_00a8_3:
@@ -7393,7 +7393,7 @@ IL_00a8_3:
 								int64_t L_57 = L_56;
 								RuntimeObject* L_58 = Box(Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_il2cpp_TypeInfo_var, &L_57);
 								NullCheck(L_48);
-								VirtualActionInvoker4< String_t*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(20 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object,System.Object) */, L_48, _stringLiteralB381BD3240D81E58CDCCD4FE5A2B8A2EA6C462E4, L_50, L_54, L_58);
+								VirtualActionInvoker4< String_t*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(23 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object,System.Object) */, L_48, _stringLiteralB381BD3240D81E58CDCCD4FE5A2B8A2EA6C462E4, L_50, L_54, L_58);
 							}
 
 IL_00ed_3:
@@ -7434,7 +7434,7 @@ IL_00ed_3:
 								int64_t L_73 = L_72;
 								RuntimeObject* L_74 = Box(Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_il2cpp_TypeInfo_var, &L_73);
 								NullCheck(L_64);
-								VirtualActionInvoker4< String_t*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(20 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object,System.Object) */, L_64, _stringLiteralA33F4D2D43FFEEA9B83CA88EF8E7058BB366209A, L_66, L_70, L_74);
+								VirtualActionInvoker4< String_t*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(23 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object,System.Object) */, L_64, _stringLiteralA33F4D2D43FFEEA9B83CA88EF8E7058BB366209A, L_66, L_70, L_74);
 							}
 
 IL_0132_3:
@@ -7479,7 +7479,7 @@ IL_0132_3:
 								int32_t L_89 = L_88;
 								RuntimeObject* L_90 = Box(CompressionMethod_t83797A546A4E85E365AE291B797BA83D7DFF1656_il2cpp_TypeInfo_var, &L_89);
 								NullCheck(L_80);
-								VirtualActionInvoker4< String_t*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(20 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object,System.Object) */, L_80, _stringLiteral370B29C92D675EBCA52A5E812E5C3D0DC623E5FE, L_82, L_86, L_90);
+								VirtualActionInvoker4< String_t*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(23 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object,System.Object) */, L_80, _stringLiteral370B29C92D675EBCA52A5E812E5C3D0DC623E5FE, L_82, L_86, L_90);
 							}
 
 IL_0177_3:
@@ -7524,7 +7524,7 @@ IL_0177_3:
 								int32_t L_105 = L_104;
 								RuntimeObject* L_106 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_105);
 								NullCheck(L_96);
-								VirtualActionInvoker4< String_t*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(20 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object,System.Object) */, L_96, _stringLiteral8593B30AE4DF8438EDBA5CE63B28CBEF315159C9, L_98, L_102, L_106);
+								VirtualActionInvoker4< String_t*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(23 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object,System.Object) */, L_96, _stringLiteral8593B30AE4DF8438EDBA5CE63B28CBEF315159C9, L_98, L_102, L_106);
 							}
 
 IL_01bc_3:
@@ -9225,13 +9225,13 @@ IL_002d_2:
 						ArrayElementTypeCheck (L_13, _stringLiteral0401815F937B8141A80097A5896A6E7C59D9A77C);
 						(L_13)->SetAt(static_cast<il2cpp_array_size_t>(4), (RuntimeObject*)_stringLiteral0401815F937B8141A80097A5896A6E7C59D9A77C);
 						NullCheck(L_7);
-						VirtualActionInvoker2< String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object[]) */, L_7, _stringLiteralA1EF5B839B0EB6EA07C266F2FB8D50C4D6062C48, L_13);
+						VirtualActionInvoker2< String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(24 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object[]) */, L_7, _stringLiteralA1EF5B839B0EB6EA07C266F2FB8D50C4D6062C48, L_13);
 						TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_14;
 						L_14 = ZipFile_get_StatusMessageTextWriter_mCA689B17429252FBD69FC2E7933AE687613CD68B_inline(__this, NULL);
 						String_t* L_15;
 						L_15 = String_CreateString_mAA0705B41B390BDB42F67894B9B67C956814C71B(NULL, ((int32_t)45), ((int32_t)72), NULL);
 						NullCheck(L_14);
-						VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_14, L_15);
+						VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_14, L_15);
 						V_0 = (bool)0;
 					}
 
@@ -9298,7 +9298,7 @@ IL_008f_2:
 						ArrayElementTypeCheck (L_36, L_40);
 						(L_36)->SetAt(static_cast<il2cpp_array_size_t>(4), (RuntimeObject*)L_40);
 						NullCheck(L_17);
-						VirtualActionInvoker2< String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object[]) */, L_17, _stringLiteral7BFC291DCC32C1E2D284BA2726194F49AA79B3EC, L_36);
+						VirtualActionInvoker2< String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(24 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object[]) */, L_17, _stringLiteral7BFC291DCC32C1E2D284BA2726194F49AA79B3EC, L_36);
 						ZipEntry_t4CA08F4B43AFD6D9C4B8B5114CEAB4A9FFDC2FB4* L_41 = V_3;
 						NullCheck(L_41);
 						String_t* L_42;
@@ -9318,7 +9318,7 @@ IL_008f_2:
 						String_t* L_46;
 						L_46 = ZipEntry_get_Comment_m25BFB4EC2E004959DCCBAC59CF52513F2E13D431_inline(L_45, NULL);
 						NullCheck(L_44);
-						VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_44, _stringLiteral59062B0A1E48C3382BA52712D9BEC57B1C4F39D8, L_46);
+						VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_44, _stringLiteral59062B0A1E48C3382BA52712D9BEC57B1C4F39D8, L_46);
 					}
 
 IL_0120_2:
@@ -9692,7 +9692,7 @@ IL_003b:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_16 = L_15->____StatusMessageTextWriter_1;
 		String_t* L_17 = ___fileName0;
 		NullCheck(L_16);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_16, _stringLiteralE1D1597D24AF8EF6F035240D10D335A35FCF9D3D, L_17);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_16, _stringLiteralE1D1597D24AF8EF6F035240D10D335A35FCF9D3D, L_17);
 	}
 
 IL_0057:
@@ -9907,7 +9907,7 @@ IL_005f:
 		NullCheck(L_22);
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_23 = L_22->____StatusMessageTextWriter_1;
 		NullCheck(L_23);
-		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_23, _stringLiteralDE3F74ACB8BBA1F9B7B8656D1F8F2C01671227CC);
+		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_23, _stringLiteralDE3F74ACB8BBA1F9B7B8656D1F8F2C01671227CC);
 	}
 
 IL_0086:
@@ -10480,7 +10480,7 @@ IL_000d:
 		String_t* L_8;
 		L_8 = ZipEntry_get_FileName_mFDDE59F4E3D6BB641C72661D3EDAA6DF98544CA7_inline(L_7, NULL);
 		NullCheck(L_6);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_6, _stringLiteralED0631F5CAE64545291297E4363A3A409A5BF6EF, L_8);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_6, _stringLiteralED0631F5CAE64545291297E4363A3A409A5BF6EF, L_8);
 	}
 
 IL_003c:
@@ -10604,7 +10604,7 @@ IL_00a3:
 		String_t* L_41;
 		L_41 = ZipFile_get_Comment_m1E9D7CBD9B151AAAAF16E034958DB19B1178DDFD_inline(L_40, NULL);
 		NullCheck(L_39);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_39, _stringLiteral0764EC0E363E7EC2B53F2EF1924BBB008F81CC37, L_41);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_39, _stringLiteral0764EC0E363E7EC2B53F2EF1924BBB008F81CC37, L_41);
 	}
 
 IL_00da:
@@ -10632,7 +10632,7 @@ IL_00da:
 		int32_t L_49 = L_48;
 		RuntimeObject* L_50 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_49);
 		NullCheck(L_45);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_45, _stringLiteralACE55A8E4B57D9DEC932348CA2770147C010D0A5, L_50);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_45, _stringLiteralACE55A8E4B57D9DEC932348CA2770147C010D0A5, L_50);
 	}
 
 IL_0105:
@@ -10708,7 +10708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZipFile_ReadIntoInstance_Orig_m8D0815A00
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_8;
 		L_8 = ZipFile_get_StatusMessageTextWriter_mCA689B17429252FBD69FC2E7933AE687613CD68B_inline(L_7, NULL);
 		NullCheck(L_8);
-		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_8, _stringLiteral73DEADFEDA72CD3EEF888A58760008529C137BBA);
+		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_8, _stringLiteral73DEADFEDA72CD3EEF888A58760008529C137BBA);
 		goto IL_0052;
 	}
 
@@ -10723,7 +10723,7 @@ IL_003c:
 		String_t* L_12;
 		L_12 = ZipFile_get_Name_m7E211D589DA7FC5B98DD39D5A251499C8C2B5CBE_inline(L_11, NULL);
 		NullCheck(L_10);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_10, _stringLiteral12F70BD4B62B219A019CED1867FE5342E1B92B37, L_12);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_10, _stringLiteral12F70BD4B62B219A019CED1867FE5342E1B92B37, L_12);
 	}
 
 IL_0052:
@@ -10758,7 +10758,7 @@ IL_0060:
 		String_t* L_20;
 		L_20 = ZipEntry_get_FileName_mFDDE59F4E3D6BB641C72661D3EDAA6DF98544CA7_inline(L_19, NULL);
 		NullCheck(L_18);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_18, _stringLiteralE05C614872D9A74C4883A60014465F36ECD733C5, L_20);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_18, _stringLiteralE05C614872D9A74C4883A60014465F36ECD733C5, L_20);
 	}
 
 IL_0081:
@@ -10926,7 +10926,7 @@ IL_0125_1:
 			String_t* L_66;
 			L_66 = ZipFile_get_Comment_m1E9D7CBD9B151AAAAF16E034958DB19B1178DDFD_inline(L_65, NULL);
 			NullCheck(L_64);
-			VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_64, _stringLiteral0764EC0E363E7EC2B53F2EF1924BBB008F81CC37, L_66);
+			VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_64, _stringLiteral0764EC0E363E7EC2B53F2EF1924BBB008F81CC37, L_66);
 		}
 
 IL_015c_1:
@@ -11838,7 +11838,7 @@ IL_0062_1:
 				TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_9;
 				L_9 = ZipFile_get_StatusMessageTextWriter_mCA689B17429252FBD69FC2E7933AE687613CD68B_inline(__this, NULL);
 				NullCheck(L_9);
-				VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_9, _stringLiteral08BC53719FF9D6B110E4E48D90515C008F1AC01B);
+				VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_9, _stringLiteral08BC53719FF9D6B110E4E48D90515C008F1AC01B);
 			}
 
 IL_008e_1:
@@ -11860,7 +11860,7 @@ IL_0093_1:
 				TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_11;
 				L_11 = ZipFile_get_StatusMessageTextWriter_mCA689B17429252FBD69FC2E7933AE687613CD68B_inline(__this, NULL);
 				NullCheck(L_11);
-				VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_11, _stringLiteral9A9E83F34282520F2E96B0632CB62CBC2E9F4874);
+				VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_11, _stringLiteral9A9E83F34282520F2E96B0632CB62CBC2E9F4874);
 			}
 
 IL_00b5_1:
@@ -12545,7 +12545,7 @@ CATCH_0020:
 			String_t* L_6;
 			L_6 = VirtualFuncInvoker0< String_t* >::Invoke(5 /* System.String System.Exception::get_Message() */, L_5);
 			NullCheck(L_4);
-			VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7C021362092F04E3F3DAABF5B9D8C36F195493EE)), L_6);
+			VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7C021362092F04E3F3DAABF5B9D8C36F195493EE)), L_6);
 		}
 
 IL_0042:
@@ -12965,7 +12965,7 @@ IL_0048:
 		String_t* L_14 = ___selectionCriteria0;
 		String_t* L_15 = ___directoryOnDisk1;
 		NullCheck(L_13);
-		VirtualActionInvoker3< String_t*, RuntimeObject*, RuntimeObject* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object) */, L_13, _stringLiteral7128DD441FBAF71FFE9C7ADC060F5534B9FE5407, L_14, L_15);
+		VirtualActionInvoker3< String_t*, RuntimeObject*, RuntimeObject* >::Invoke(22 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object) */, L_13, _stringLiteral7128DD441FBAF71FFE9C7ADC060F5534B9FE5407, L_14, L_15);
 	}
 
 IL_0075:
@@ -13001,7 +13001,7 @@ IL_0075:
 		int32_t L_27 = L_26;
 		RuntimeObject* L_28 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_27);
 		NullCheck(L_24);
-		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_24, _stringLiteralC0B707597CBF155540BA220296EEB82FC383A4FD, L_28);
+		VirtualActionInvoker2< String_t*, RuntimeObject* >::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object) */, L_24, _stringLiteralC0B707597CBF155540BA220296EEB82FC383A4FD, L_28);
 	}
 
 IL_00b2:

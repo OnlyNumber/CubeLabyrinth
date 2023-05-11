@@ -24061,7 +24061,7 @@ IL_0032:
 		Type_t* L_14 = V_7;
 		NullCheck(L_14);
 		Type_t* L_15;
-		L_15 = VirtualFuncInvoker0< Type_t* >::Invoke(108 /* System.Type System.Type::get_BaseType() */, L_14);
+		L_15 = VirtualFuncInvoker0< Type_t* >::Invoke(114 /* System.Type System.Type::get_BaseType() */, L_14);
 		V_8 = L_15;
 		goto IL_006a;
 	}
@@ -24097,7 +24097,7 @@ IL_0061:
 		Type_t* L_22 = V_8;
 		NullCheck(L_22);
 		Type_t* L_23;
-		L_23 = VirtualFuncInvoker0< Type_t* >::Invoke(108 /* System.Type System.Type::get_BaseType() */, L_22);
+		L_23 = VirtualFuncInvoker0< Type_t* >::Invoke(114 /* System.Type System.Type::get_BaseType() */, L_22);
 		V_8 = L_23;
 	}
 

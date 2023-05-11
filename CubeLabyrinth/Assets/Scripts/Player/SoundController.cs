@@ -7,7 +7,9 @@ public class SoundController : MonoBehaviour
     [SerializeField]
     private AudioSource _explosionSound;
 
-    private void ActivateExplosion()
+    [ContextMenu("ActivateExplosion")]
+    public void ActivateExplosion()
     {
+        _explosionSound.Play();
     }
 }
